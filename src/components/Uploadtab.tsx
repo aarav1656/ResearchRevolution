@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
-import Upload from "../components/lighthouse/upload";
+import Upload from "./lighthouse/upload";
 import { useRouter } from "next/router";
-import AccessControl from "../components/lighthouse/acesscontrol";
+import AccessControl from "./lighthouse/acesscontrol";
 import { Box } from "@chakra-ui/react";
-import LensShareComponent from "../components/lens";
+import LensShareComponent from "./lens";
 
 
 export default function Meeting() {

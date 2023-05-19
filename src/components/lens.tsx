@@ -12,6 +12,7 @@ function LensShareComponent() {
   return (
     <>
     <Box className='w-90 border-4 mx-40 p-4'>
+      <h1 className='text-center p-4'>Share on Lens to increase engagement for your Research Paper</h1>
       <Input
         type="text"
         placeholder="Enter content"

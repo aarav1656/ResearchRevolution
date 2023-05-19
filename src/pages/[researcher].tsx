@@ -1,6 +1,8 @@
 import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 import React from 'react';
 import ResearcherPapers from '../components/ResearcherPapers';
+import Uploadtab from '../components/Uploadtab';
+import Allpaper from '../components/papers/allpapers';
 
 type ResearcherPageProps = {
   address: string;
@@ -23,10 +25,10 @@ const ResearcherPage: React.FC<ResearcherPageProps> = ({ address }) => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <ResearcherPapers address={address} status="all" />
+            <Allpaper />
           </TabPanel>
           <TabPanel>
-            {/* AddNewPaper component */}
+            <Uploadtab />
           </TabPanel>
           <TabPanel>
             <ResearcherPapers address={address} status="waiting" />
