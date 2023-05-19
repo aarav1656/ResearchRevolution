@@ -2,7 +2,28 @@
 
 A DeSci Project built on FVM Blockchain
 
-Focussed on =>
+Problems Addressed by ResearchRevolution ->
+
+The DeSci project aims to address several challenges in the scientific community using Web3 technologies. Here are the key problems that DeSci intends to solve:
+
+1. Publishing Problem
+Traditional science publishing involves high publishing fees and limited access, leading to restricted dissemination of knowledge and excessive profits for publishers. Free platforms lack quality control and legitimacy. DeSci seeks to leverage Web3 to create an accessible and incentivized system for publishing scientific papers and data.
+
+2. Reproducibility and Replicability Problem
+Reproducibility and replicability are crucial for scientific discovery but often lack proper mechanisms. RR aims to integrate Web3 tools to ensure that scientific results can be reliably reproduced and replicated, providing trust and transparency in the research process.
+
+3. Funding Problem
+The current model for funding science suffers from biases, long waiting times, and conservative project selection. RR explores Web3's potential to disrupt this model by experimenting with incentive models, DAO governance, and tokenized funding structures, offering more inclusive and innovative approaches to science funding.
+
+4. IP Ownership and Development Problem
+Traditional science struggles with IP ownership and valuation, limiting the utilization of research assets. RR plans to leverage Web3's capabilities, such as non-fungible tokens (NFTs), to establish transparent ownership, reward researchers, and enable decentralized research entities like DAOs to conduct on-chain research.
+
+5. Data Storage, Access, and Architecture Problem
+Scientific data accessibility and resilience are essential for collaboration and reproducibility. RR aims to utilize FVM to store the data in a decentralised way.
+
+By addressing these problems, DeSci intends to empower the scientific community with Web3 tools, fostering open science, collaboration, and innovation.
+
+Features =>
 
 Landing Page:
 
