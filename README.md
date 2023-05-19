@@ -2,6 +2,8 @@
 
 A DeSci Project built on FVM Blockchain
 
+Polybase Schema for users - https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/
+
 Problems Addressed by ResearchRevolution ->
 
 The DeSci project aims to address several challenges in the scientific community using Web3 technologies. Here are the key problems that DeSci intends to solve:
