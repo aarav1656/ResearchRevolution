@@ -3,11 +3,10 @@ import { Box, Flex, HStack, Link, Stack, useColorMode, useColorModeValue, useDis
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import StaticImage from 'next/image';
-import clogo from "../asset/clogo.png";
+import rr from "../asset/rr.png";
 import { Button } from '@chakra-ui/button';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount} from 'wagmi';
-import { useState, useEffect} from 'react';
 
 const NavLink = ({ children, href }: { children: ReactNode; href: string }) => (
   <Link
@@ -33,7 +32,7 @@ export default function Navbar() {
 
 
   const Links = [
-    { label: 'Dashboard', href: '/marketplace'},
+    { label: 'Marketplace', href: '/marketplace'},
     { label: 'Nft', href: '/nft' },
     { label: 'Recording', href: '/recording' },
   ];
@@ -45,7 +44,7 @@ export default function Navbar() {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={8} alignItems={'center'}>
             <Link href="/">
-              <StaticImage src={clogo} alt="Logo" width={250} height={50} />
+              <StaticImage src={rr} alt="Logo" width={250} height={50} className='mx-2'/>
             </Link>
             <HStack
               as={'nav'}

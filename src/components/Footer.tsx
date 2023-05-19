@@ -7,10 +7,10 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
 import StaticImage  from 'next/image';
-import clogo from "../asset/clogo.png";
+import rr from "../asset/rr.png";
   
   const SocialButton = ({
     children,
@@ -56,13 +56,13 @@ import clogo from "../asset/clogo.png";
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <StaticImage src={clogo} alt="Logo" width={250} height={50} />
-          <Text>Copyright © 2023 Made with ❤️ Creator Connect</Text>
+          <StaticImage src={rr} alt="Logo" width={250} height={50} />
+          <Text>Copyright © 2023 Made with ❤️ by ResearchRevolution Team</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'https://www.twitter.com/0xkamal7'} >
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
+            <SocialButton label={'YouTube'} href={'https://www.youtube.com/@0xkamal7'}>
               <FaYoutube />
             </SocialButton>
           </Stack>
