@@ -31,10 +31,10 @@ export default function Hero() {
           fontWeight={600}
           fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}>
-          Connecting with Creators{'  '}
+          Welcome to the World of{'  '}
           <br/>
           <Text as={'span'} color={'orange.400'}>
-            made easy
+            Decentralised Science
           </Text>
         </Heading>
         <Text color={'gray.500'} maxW={'3xl'}>

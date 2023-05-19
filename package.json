@@ -1,5 +1,5 @@
 {
-  "name": "next-ts",
+  "name": "rr",
   "private": true,
   "scripts": {
     "dev": "next dev",

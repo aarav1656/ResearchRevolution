@@ -30,16 +30,10 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-  const [dashboardLink, setDashboardLink] = useState('');
 
-  useEffect(() => {
-    if (address) {
-      setDashboardLink(`/dashboard/${address}`);
-    }
-  }, [address]);
 
   const Links = [
-    { label: 'Dashboard', href: dashboardLink},
+    { label: 'Dashboard', href: '/marketplace'},
     { label: 'Nft', href: '/nft' },
     { label: 'Recording', href: '/recording' },
   ];
