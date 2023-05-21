@@ -10,7 +10,7 @@ import {
   import { FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
 import StaticImage  from 'next/image';
-import rr from "../asset/rr.png";
+import rr from "../../asset/rr.png";
   
   const SocialButton = ({
     children,

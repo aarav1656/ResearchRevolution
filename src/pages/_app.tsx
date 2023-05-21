@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
 import { Box, Flex } from '@chakra-ui/react';
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -12,7 +12,7 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism , polygonMumbai , filecoinHyperspace } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-
+import { ResearcherProvider } from '../../context/ResearcherContext';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -42,7 +42,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Flex flexDirection="column" minHeight="100vh">
         <Navbar />
         <Box flex="1">
-          <Component {...pageProps} />
+          <ResearcherProvider>
+            <Component {...pageProps} />
+          </ResearcherProvider>
         </Box>
         <Footer />
       </Flex>

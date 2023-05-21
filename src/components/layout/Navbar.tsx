@@ -3,7 +3,7 @@ import { Box, Flex, HStack, Link, Stack, useColorMode, useColorModeValue, useDis
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import StaticImage from 'next/image';
-import rr from "../asset/rr.png";
+import rr from "../../asset/rr.png";
 import { Button } from '@chakra-ui/button';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount} from 'wagmi';

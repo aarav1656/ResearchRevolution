@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Hero from "../components/Hero";
+import Hero from "../components/layout/Hero";
 import Feature from "../components/Feature";
 
 const App = () => {

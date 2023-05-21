@@ -4,11 +4,13 @@ Unleashing the Future of Science: ResearchRevolution - Where Cross-Chain FVM Fue
 
 Polybase Schema for users - [https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/](https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/)
 
+https://docs.axelar.dev/resources/testnet
+
 ## Technologies Used
 
 1. Axellar - For Cross-Chain Funding for the Research Projects
 
-2. Polybase - For NFT Chat and support of the papers
+2. Polybase - For NFT Chat and Peer Review.
 
 3. FVM - Research Papers are stored on FVM.
 
