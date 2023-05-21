@@ -1,30 +1,32 @@
-import React from "react";
-import { useEffect } from "react";
-import Upload from "../components/lighthouse/upload";
-import { useRouter } from "next/router";
-import AccessControl from "../components/lighthouse/acesscontrol";
-import { Box } from "@chakra-ui/react";
-import LensShareComponent from "../components/lens";
+import ResearchersList from '../components/researcher/ResearcherList';
+import ResearcherForm from '../components/researcher/ResearcherForm';
+import ResearchersModal from '../components/researcher/ResearcherModal';
+import { Button } from '@chakra-ui/react';
+import { useState } from 'react';
 
+const ResearchersPage = () => {
 
-export default function Meeting() {
-    const router = useRouter();
-    const researcheradd = router.query.address?.toString() || "";
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    console.log(router.query.address,"query");
-    return (
-        <>
-            <p className="fixed flex justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30 min-w-fit mr-4">
-                Researcher Address {" "}
-                <code className="font-mono font-bold">{researcheradd}</code>
-            </p>
-            <div>
-            <Box className="flex justify-center items-center">
-                <Upload />
-                <AccessControl />
-            </Box>
-            <LensShareComponent />
-        </div>
-        </>
-    );
-}
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+    
+  return (
+    <div>
+      <h1 className='text-center text-indigo-400 font-semibold text-2xl'>Marketplace</h1>
+      <Button onClick={openModal}>Add Researcher</Button>
+      <ResearchersModal isOpen={isModalOpen} onClose={closeModal} />
+      <ResearchersList />
+      <h1>ResearchPapers</h1>
+      
+    </div>
+  );
+};
+
+export default ResearchersPage;

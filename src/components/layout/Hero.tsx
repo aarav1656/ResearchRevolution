@@ -8,13 +8,13 @@ import {
   Icon,
   IconProps,
 } from '@chakra-ui/react';
-import Community from "../asset/community.png";
+import Community from "../../asset/community.png";
 import StaticImage  from 'next/image';
-import creator from "../asset/creator.png";
+import creator from "../../asset/creator.png";
 import Image from 'next/image';
-import audience from "../asset/audience.png";
-import meeting from "../asset/meeting.png";
-import gated from "../asset/gated.png";
+import audience from "../../asset/audience.png";
+import meeting from "../../asset/meeting.png";
+import gated from "../../asset/gated.png";
 import router from 'next/router';
 import { useAccount } from 'wagmi';
 

@@ -7,7 +7,7 @@ import { Box } from "@chakra-ui/react";
 import LensShareComponent from "./lens";
 
 
-export default function Meeting() {
+export default function Uploadtab() {
     const router = useRouter();
     const researcheradd = router.query.address?.toString() || "";
 

@@ -1,7 +1,6 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Box, FormControl, FormLabel, Input, Button } from '@chakra-ui/react';
-import { ResearcherContext } from '../../context/ResearcherContext';
-import { useState } from 'react';
+import { ResearcherContext } from '../../../context/ResearcherContext';
 import { useForm } from 'react-hook-form';
 
 const ResearcherForm = () => {
@@ -9,7 +8,7 @@ const ResearcherForm = () => {
   const { addResearcher } = useContext(ResearcherContext);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = async (data : any) => {
+  const onSubmit = async (data) => {
     setIsSubmitting(true);
 
     // Perform any API calls or data processing here
@@ -36,6 +35,16 @@ const ResearcherForm = () => {
         <FormControl id="institution" mb={4}>
           <FormLabel>Institution</FormLabel>
           <Input {...register('institution', { required: true })} type="text" />
+        </FormControl>
+
+        <FormControl id="walletAddress" mb={4}>
+          <FormLabel>Wallet Address</FormLabel>
+          <Input {...register('walletAddress', { required: true })} type="text" />
+        </FormControl>
+      
+        <FormControl id="profileUrl" mb={4}>
+          <FormLabel>Profile URL</FormLabel>
+          <Input {...register('profileUrl')} type="text" />
         </FormControl>
 
         <Button type="submit" colorScheme="teal" isLoading={isSubmitting}>
