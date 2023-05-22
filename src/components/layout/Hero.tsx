@@ -38,8 +38,8 @@ export default function Hero() {
           </Text>
         </Heading>
         <Text color={'gray.500'} maxW={'3xl'}>
-          An innovative solution that empowers creators to easily create and build their community. 
-          By combining the features of pay-per-view and an online event platform, we offer creators a comprehensive suite of tools to monetize their content and engage with their audience.
+        Decentralized science (DeSci) is a movement that aims to build public infrastructure for funding, creating, 
+        reviewing, crediting, storing, and disseminating scientific knowledge fairly and equitably using the Web3 stack.
         </Text>
         <Stack spacing={6} direction={'row'}>
           <Button

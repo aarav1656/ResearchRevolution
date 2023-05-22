@@ -71,33 +71,33 @@ import {
             Features
           </Heading>
           <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-            Connect with your creators seamlessly and get access to exclusive content.
+            Research Revolution is powered by the best features to provide a decentralised platform for researchers to publish their research papers and get paid for it.
           </Text>
         </Stack>
   
         <Container maxW={'5xl'} mt={12}>
           <Flex flexWrap="wrap" gridGap={6} justify="center">
             <Card
-                heading={'Build & Grow your Community'}
+                heading={'NFT Chat Powered'}
                 icon={<Icon as={FcManager} w={10} h={10} />}
                 description={
-                  'As a Creator Build your Communities by Scheduling Token-Gated Meetups'
+                  'Chat with your community members and get access to exclusive content and groups.'
                 }
                 href={'#'}
               />
             <Card
-              heading={'Pay per view Content'}
+              heading={'DATADAO'}
               icon={<Icon as={FcDonate} w={10} h={10} />}
               description={
-                'Creators can monetize their content by implementing a pay-per-view model, where viewers pay a fee to access their exclusive videos or podcasts.'
+                'A new Programmable Market to sell your Research Papers'
               }
               href={'#'}
             />
             <Card
-              heading={'NFT gated events'}
+              heading={'Global Collaberation for your Research Paper'}
               icon={<Icon as={FcCollaboration} w={10} h={10} />}
               description={
-                'Creators can organize interactive events, such as virtual meetings or live streams, where their community members can engage with them in real-time.'
+                'Collaborate with peers from all over the globe in dynamic teams.'
               }
               href={'#'}
             />
@@ -110,10 +110,10 @@ import {
               href={'#'}
             />
             <Card
-              heading={'AI NFT for your Community'}
+              heading={'Peer Review System'}
               icon={<Icon as={SiProbot} w={10} h={10} />}
               description={
-                'Get an AI NFT for your Community to access your content.'
+                'You can earn tokens and reputation for peer-reviewing work.'
               }
               href={'#'}
             />
