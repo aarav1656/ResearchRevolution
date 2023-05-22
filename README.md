@@ -6,6 +6,12 @@ Polybase Schema for users - [https://explorer.testnet.polybase.xyz/studio/pk%2F0
 
 https://docs.axelar.dev/resources/testnet
 
+Axellar Contract Deployments to Different Chains
+
+https://testnet.snowtrace.io/tx/0xdd43bfe1a65c09731733ee0214288339af2a817d36d0283aa13f979ed5c826a1
+
+https://hyperspace.filfox.info/en/tx/0x83cdd9971ff3c2c83e0c6ec48740ed6d2ac1f2c3e6f16dfae6f2b151ff660040
+
 ## Technologies Used
 
 1. Axellar - For Cross-Chain Funding for the Research Projects

@@ -12,5 +12,9 @@ module.exports = {
         url: "https://rpc.ankr.com/filecoin_testnet",
         accounts: [PRIVATE_KEY],
       },
+      fuji : {
+        url: "https://api.avax-test.network/ext/bc/C/rpc",
+        accounts: [PRIVATE_KEY],
+      }
     },
   };

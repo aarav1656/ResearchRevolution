@@ -48,12 +48,12 @@ export default function Hero() {
             colorScheme={'orange'}
             bg={'orange.400'}
             _hover={{ bg: 'orange.500' }}
-            onClick={() => router.push(`/dashboard/${address}`)}
+            onClick={() => router.push(`/${address}`)}
             >
             Get started
           </Button>
-          <Button rounded={'full'} px={6}>
-            Learn more
+          <Button rounded={'full'} px={6} onClick={()=> router.push('/marketplace')}>
+            Marketplace
           </Button>
         </Stack>
         <Flex w={'full'} className='space-x-10' >
