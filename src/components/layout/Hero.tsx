@@ -17,6 +17,7 @@ import meeting from "../../asset/meeting.png";
 import gated from "../../asset/gated.png";
 import router from 'next/router';
 import { useAccount } from 'wagmi';
+import RegisterUser from '../RegisterUser';
 
 export default function Hero() {
   const { address } = useAccount();
@@ -55,6 +56,7 @@ export default function Hero() {
           <Button rounded={'full'} px={6} onClick={()=> router.push('/marketplace')}>
             Marketplace
           </Button>
+          <RegisterUser />
         </Stack>
         <Flex w={'full'} className='space-x-10' >
           <Image src={gated} alt='gated' className='h-80 w-80'/>

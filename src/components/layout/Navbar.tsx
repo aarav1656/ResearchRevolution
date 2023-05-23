@@ -35,6 +35,7 @@ export default function Navbar() {
     { label: 'Marketplace', href: '/marketplace'},
     { label: 'Nft', href: '/nft' },
     { label: 'Recording', href: '/recording' },
+    { label: 'Peer Review', href: '/nftchat' },
   ];
 
   console.log(address, 'address');

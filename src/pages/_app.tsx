@@ -14,6 +14,9 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ResearcherProvider } from '../../context/ResearcherContext';
 import type { AppProps } from 'next/app';
+import { PolybaseProvider , AuthProvider} from "@polybase/react";
+import { Polybase } from "@polybase/client";
+import { Auth } from "@polybase/auth";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { chains, provider } = configureChains(
@@ -33,21 +36,31 @@ function MyApp({ Component, pageProps }: AppProps) {
     autoConnect: true,
     connectors,
     provider
-  })
+  });
+
+  // polybase
+  const polybase = new Polybase();
+  const auth = typeof window !== "undefined" ? new Auth() : null;
 
   return (
     <ChakraProvider>
       <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
-      <Flex flexDirection="column" minHeight="100vh">
-        <Navbar />
-        <Box flex="1">
-          <ResearcherProvider>
-            <Component {...pageProps} />
-          </ResearcherProvider>
-        </Box>
-        <Footer />
-      </Flex>
+        <PolybaseProvider polybase={polybase}>
+        <AuthProvider
+          auth={auth}
+          polybase={polybase}>
+            <Flex flexDirection="column" minHeight="100vh">
+              <Navbar />
+              <Box flex="1">
+                <ResearcherProvider>
+                  <Component {...pageProps} />
+                </ResearcherProvider>
+              </Box>
+              <Footer />
+            </Flex>
+        </AuthProvider>
+        </PolybaseProvider>
       </RainbowKitProvider>
       </WagmiConfig>
     </ChakraProvider>
