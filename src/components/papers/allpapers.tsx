@@ -4,6 +4,7 @@ import { useAccount } from "wagmi";
 import { RiFilePaper2Line } from "react-icons/ri";
 import lighthouse from "@lighthouse-web3/sdk";
 import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
 const ResearchPaperBox = ({ fileName, publicKey, cid }) => (
   <Box
@@ -28,9 +29,11 @@ const ResearchPaperBox = ({ fileName, publicKey, cid }) => (
       CID: {cid}
     </Text>
     <div className="flex justify-center items-center">
-      <Button mx={4} mt={4} p-4>
-        View
-      </Button>
+      <Link href= {`https://gateway.lighthouse.storage/ipfs/${cid}`}>
+          <Button mx={4} mt={4} p-4>
+            View
+          </Button>
+      </Link>
       <Button mx={4} mt={4}>
         Make it Public
       </Button>

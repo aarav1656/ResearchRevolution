@@ -1,11 +1,7 @@
 import React from 'react';
 import { useAuth } from '@polybase/react';
-import * as eth from '@polybase/eth';
-import { secp256k1 } from '@polybase/util';
 import { Polybase } from '@polybase/client';
-import { ethPersonalSign } from '@polybase/eth';
 import { useEffect } from 'react';
-import Link from 'next/link';
 import { useState } from 'react';
 import { useCollection } from '@polybase/react';
 import { useRouter } from 'next/router';
@@ -26,7 +22,6 @@ function Chat() {
   const [selectedName, setSelectedName] = useState('');
   const { data, error, loading } = useCollection(userRef);
 
-  console.log(data.data.fromAddress,"data");
   const { auth, state } = useAuth();
 //   console.log(state.userId, 'state.userId');
   const [formInput, setFormInput] = useState({
@@ -87,7 +82,6 @@ function Chat() {
 
   return (
     <>
-    <h1 className='text-center text-2xl text-stone-100'>Get Peer Review</h1>
     <div style={{ marginTop: '50px' }}>
       <div className="w-full h-32"></div>
 
@@ -192,8 +186,7 @@ function Chat() {
                       className="rounded py-2 px-4"
                       style={{ backgroundColor: '#FCF4CB' }}>
                       <p className="text-xs">
-                        Messages to this chat and calls are now secured with
-                        peer-to-peer encryption. Tap for more info.
+                        Wallet to Wallet Secure NFT Interactions.
                       </p>
                     </div>
                   </div>
