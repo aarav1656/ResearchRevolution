@@ -8,18 +8,35 @@ https://docs.axelar.dev/resources/testnet
 
 Axellar Contract Deployments to Different Chains
 
+Cross Chain Funding Made -> https://testnet.axelarscan.io/gmp/0xd61b239b848e7c83e5313dd29fa79cddf4317f9ab14b5cf4114c0af38919aa0b
+
+Fantom - 0xdf366B8FB6553E6F5826Ee6195cb9330A34442c1
+
+Avalanche - 0x8b24F9805c44B505319F681130E199c97fbD58d4
+
+Polygon - 0xbFDc57CE8CBCb4202826ea3c462f0a938D39d3e2
+
 https://testnet.snowtrace.io/tx/0xdd43bfe1a65c09731733ee0214288339af2a817d36d0283aa13f979ed5c826a1
 
 https://hyperspace.filfox.info/en/tx/0x83cdd9971ff3c2c83e0c6ec48740ed6d2ac1f2c3e6f16dfae6f2b151ff660040
 
 0xE73DF3Be7A0D0CBCEb281b76eB7aC216449dFcDd polygon 
+
 ## Technologies Used
 
-1. Axellar - For Cross-Chain Funding for the Research Projects
+The Research Revolution platform was built using a combination of various technologies and frameworks. The key technologies used include:
 
-2. Polybase - For NFT Chat and Peer Review.
+Axellar: Axellar was utilized for cross-chain funding of research projects, enabling seamless financial transactions across different blockchain networks.
 
-3. FVM - Research Papers are stored on FVM.
+Polybase: Polybase was integrated into the platform to provide NFT-based chat functionality and peer-to-peer review capabilities, fostering collaboration and feedback among researchers.
+
+FVM: Research papers are stored on the Filecoin Virtual Machine (FVM), ensuring decentralized and secure storage of scientific data. A DataDAO Market is created to facilitate open sharing of research papers.
+
+Lit Protocol: P2P keys provided by the Lit Protocol were employed for encrypting documents, ensuring privacy and data protection for researchers.
+
+Tellor Oracle: The Tellor Oracle was utilized to fetch and provide on-chain data for research purposes, enabling access to reliable and trustworthy data sources.
+
+Spheron: Spheron, a decentralized deployment framework, was used to ensure the secure and decentralized deployment of the Research Revolution platform.
 
 ## Problems Addressed by ResearchRevolution
 

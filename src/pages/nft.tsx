@@ -129,25 +129,25 @@ function App() {
 
   return (
     <>
-    <h1 className='text-center text-2xl text-slate-200'>Generate an AI NFT for your community</h1>
+    <h1 className='text-center text-2xl text-slate-200 my-6'>Generate an AI NFT for your Research Supporters</h1>
     <Box maxW="md" mx="auto">
       <Box className='form' p={4}>
         <form onSubmit={submitHandler} className='flex flex-col justify-center'>
           <Input
             type="text"
-            placeholder="Create a name..."
+            placeholder="Write a name..."
             onChange={(e) => {
               setName(e.target.value);
             }}
           />
           <Input
             type="text"
-            placeholder="Create a description..."
+            placeholder="Write a little description of research .."
             onChange={(e) => setDescription(e.target.value)}
             className='my-10'
           />
           <Button mt={2} colorScheme="blue" type="submit" disabled={isWaiting} >
-            Create AI NFT & Mint
+            Create AI NFT & Mint on Filecoin Network
           </Button>
         </form>
 
