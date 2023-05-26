@@ -1,5 +1,4 @@
 import ResearchersList from '../components/researcher/ResearcherList';
-import ResearcherForm from '../components/researcher/ResearcherForm';
 import ResearchersModal from '../components/researcher/ResearcherModal';
 import { Button } from '@chakra-ui/react';
 import { useState } from 'react';

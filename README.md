@@ -3,7 +3,7 @@
 ### Contract code for the Repo can be found at ->
 https://github.com/legendarykamal/RR-Contract
 
-Unleashing the Future of Science: ResearchRevolution - Where Cross-Chain FVM Fuels DeSci
+Unleashing the Future of Science: ResearchRevolution - Where FVM with Axellar Fuels the Cross-Chain DeSci
 
 Polybase Schema for users - [https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/](https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/)
 
@@ -27,23 +27,15 @@ https://hyperspace.filfox.info/en/tx/0x83cdd9971ff3c2c83e0c6ec48740ed6d2ac1f2c3e
 
 0xE73DF3Be7A0D0CBCEb281b76eB7aC216449dFcDd polygon 
 
-## Technologies Used
+| Technology     | Description                                                                                                                                                                                                                                                                                     |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Axellar        | Axellar was utilized for cross-chain funding of research projects, enabling seamless financial transactions across different blockchain networks. This proves to be a vital feature that allows researchers to receive funding in various cryptocurrencies and manage their funding wallets directly from the platform. |
+| Polybase       | Polybase was integrated into the platform to provide NFT-based chat functionality and peer-to-peer review capabilities, fostering collaboration and feedback among researchers.                                                                                                                 |
+| FVM            | Research papers are stored on the Filecoin Virtual Machine (FVM), ensuring decentralized and secure storage of scientific data. A DataDAO Market is created to facilitate open sharing of research papers. DataDao's Mission is to preserve, curate, augment, and promote datasets considered valuable.      |
+| Lit Protocol   | P2P keys provided by the Lit Protocol were employed for encrypting documents, ensuring privacy and data protection for researchers.                                                                                                                                                           |
+| Tellor Oracle  | The Tellor Oracle was utilized to fetch and provide on-chain data for research purposes, enabling access to reliable and trustworthy data sources.                                                                                                                                                |
+| Spheron        | Spheron, a decentralized deployment framework, was used to ensure the secure and decentralized deployment of the Research Revolution platform.                                                                                                                                                  |
 
-The Research Revolution platform was built using a combination of various technologies and frameworks. The key technologies used include:
-
-- Axellar: Axellar was utilized for cross-chain funding of research projects, enabling seamless financial transactions across different blockchain networks.
-
-This proves to be a vital feature that allows researchers to receive funding in various cryptocurrencies and manage their funding wallets directly from the platform.
-
-- Polybase: Polybase was integrated into the platform to provide NFT-based chat functionality and peer-to-peer review capabilities, fostering collaboration and feedback among researchers.
-
-- FVM: Research papers are stored on the Filecoin Virtual Machine (FVM), ensuring decentralized and secure storage of scientific data. A DataDAO Market is created to facilitate open sharing of research papers.
-
-- Lit Protocol: P2P keys provided by the Lit Protocol were employed for encrypting documents, ensuring privacy and data protection for researchers.
-
-- Tellor Oracle: The Tellor Oracle was utilized to fetch and provide on-chain data for research purposes, enabling access to reliable and trustworthy data sources.
-
-- Spheron: Spheron, a decentralized deployment framework, was used to ensure the secure and decentralized deployment of the Research Revolution platform.
 
 ## Problems Addressed by ResearchRevolution
 
