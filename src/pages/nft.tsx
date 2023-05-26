@@ -107,8 +107,15 @@ function App() {
 
     // Save the URL
     const url = `https://ipfs.io/ipfs/${ipnft}/metadata.json`  
-    setURL(url)
+    setURL(url);
 
+    toast({
+      title: "Image Uploaded",
+      description: `Your image has been uploaded to IPFS ${url}`,
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    })
     return url
   }
 

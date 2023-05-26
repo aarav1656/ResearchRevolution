@@ -4,6 +4,8 @@ Unleashing the Future of Science: ResearchRevolution - Where Cross-Chain FVM Fue
 
 Polybase Schema for users - [https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/](https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/)
 
+Researcher NFT Deployed on FVM Hyperspace Network - 0xC10261e1980D0a45b14B24CD8e1c79646dbD9CaD which will be used by the different researchers to token-gate their Papers.
+
 https://docs.axelar.dev/resources/testnet
 
 Axellar Contract Deployments to Different Chains
