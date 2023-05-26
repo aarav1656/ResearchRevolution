@@ -1878,38 +1878,38 @@
   dependencies:
     "penpal" "^6.2.2"
 
-"@polybase/client@*":
-  "integrity" "sha512-xOQrLpkwt3xNZxCG48CIh1sFRyYdEORBz8RAV8Km07g5jmc8e2mSpJHPnVO+Sjat/2D+FjVNnqDPsfgTzYjIxw=="
-  "resolved" "https://registry.npmjs.org/@polybase/client/-/client-0.5.0.tgz"
-  "version" "0.5.0"
+"@polybase/client@*", "@polybase/client@^0.6.0":
+  "integrity" "sha512-nUIIalt60S5aJiKpudldDcdp26s8g1Ql/tUm21ZR7UuYHA7VEGkWZLuNKEwNaWX1i+5aAnZMqfKi93+CIJa2HQ=="
+  "resolved" "https://registry.npmjs.org/@polybase/client/-/client-0.6.0.tgz"
+  "version" "0.6.0"
   dependencies:
-    "@polybase/eth" "^0.5.0"
-    "@polybase/polylang" "0.4.10"
+    "@polybase/eth" "^0.6.0"
+    "@polybase/polylang" "^0.6.0"
     "axios" "0.27.2"
 
-"@polybase/eth@^0.5.0":
-  "integrity" "sha512-0FHsnerLbKIzqK4z9CWrpGWLuvdi86nqgIy2zmuQ9lPM9bHrXcl8rtY+HJ60Rf5hFESpBnSjNPhyWgfbVNgxtg=="
-  "resolved" "https://registry.npmjs.org/@polybase/eth/-/eth-0.5.0.tgz"
-  "version" "0.5.0"
+"@polybase/eth@^0.6.0":
+  "integrity" "sha512-cxRpdOKlgqGU3ZW8ZECq8zewPCI/WHyaSNRyDHns/13FCdkwo/xaYEJukUWCDbjI56ka/qdfy/Z8Am2MDTVcrw=="
+  "resolved" "https://registry.npmjs.org/@polybase/eth/-/eth-0.6.0.tgz"
+  "version" "0.6.0"
   dependencies:
     "@ethersproject/keccak256" "^5.7.0"
     "@ethersproject/strings" "^5.7.0"
-    "@polybase/util" "^0.5.0"
+    "@polybase/util" "^0.6.0"
 
-"@polybase/polylang@0.4.10":
-  "integrity" "sha512-CcBGLPXdbIkpdLEblH1ylyfZ82PbjnQc8vz8YPXkrC78U2kMcAeelel812b/eDv3v3uYVPrsCGfqSuUmtXiPOA=="
-  "resolved" "https://registry.npmjs.org/@polybase/polylang/-/polylang-0.4.10.tgz"
-  "version" "0.4.10"
+"@polybase/polylang@^0.6.0":
+  "integrity" "sha512-yk2JbnNkJDKs2Gnjedra7H1b8H7MCZKaOlo3n+OjjcTlqsZq8Iz472hE0umxDi74zxcsMnIb/qsR6oj6fGKrpw=="
+  "resolved" "https://registry.npmjs.org/@polybase/polylang/-/polylang-0.6.0.tgz"
+  "version" "0.6.0"
 
 "@polybase/react@^0.5.0":
   "integrity" "sha512-p8jmZ2+el3E7eWPGqaU2sY92A5ChrA7fS3KTS1ctlTKWKbhmy585luTb1Y/oQHDbMuLsDu4Le7mmXpKX5M7G9Q=="
   "resolved" "https://registry.npmjs.org/@polybase/react/-/react-0.5.0.tgz"
   "version" "0.5.0"
 
-"@polybase/util@^0.5.0":
-  "integrity" "sha512-RXq+PlHhif3LyvBQ+ldUvfSPdkf55LzWBx+9nVcT5A9FFpwoaxvOB+2qmzX3LOAXtJOsy7Pm82k5C1oZgpeujg=="
-  "resolved" "https://registry.npmjs.org/@polybase/util/-/util-0.5.0.tgz"
-  "version" "0.5.0"
+"@polybase/util@^0.6.0":
+  "integrity" "sha512-73urNNXAWRSxMQMlIMz+PlNHxlOQd7LIW5Ee+iQLsNyEkmCmJE+jW4rdTix/uISTd1jxZGTlUxk9ROFpy6tQYQ=="
+  "resolved" "https://registry.npmjs.org/@polybase/util/-/util-0.6.0.tgz"
+  "version" "0.6.0"
   dependencies:
     "@ethersproject/bytes" "^5.7.0"
     "@ethersproject/signing-key" "^5.7.0"
