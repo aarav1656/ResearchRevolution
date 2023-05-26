@@ -2212,6 +2212,25 @@
   dependencies:
     "tslib" "^2.4.0"
 
+"@tableland/evm@^4.2.2":
+  "integrity" "sha512-itcUWvnZ4CDujVXlP9SKM49Tfo1mawynf0PooceA76JqGMFKaO1f5LArD7Xss0YOvRMtRpQbELbfNdznIk+FGw=="
+  "resolved" "https://registry.npmjs.org/@tableland/evm/-/evm-4.2.2.tgz"
+  "version" "4.2.2"
+
+"@tableland/sdk@^4.2.2":
+  "integrity" "sha512-LYqXMtyU0YGizrVlPJmYXgIf+DhV+U1epdVat0zZYksNvO8NRJxx40k7R5ZqMVkB0dhgYdB1ybbsLBD8lLWjXA=="
+  "resolved" "https://registry.npmjs.org/@tableland/sdk/-/sdk-4.2.2.tgz"
+  "version" "4.2.2"
+  dependencies:
+    "@tableland/evm" "^4.2.2"
+    "@tableland/sqlparser" "^1.0.6-pre.5"
+    "ethers" "^5.7.2"
+
+"@tableland/sqlparser@^1.0.6-pre.5":
+  "integrity" "sha512-fSoR4hslQqcvkjU0JvRG70fWEVOsbJc8177LqaHC2r2DDC2328Kho/t+aeG5qho4gvSuZckDcKEgeCugD1m5Mg=="
+  "resolved" "https://registry.npmjs.org/@tableland/sqlparser/-/sqlparser-1.0.6.tgz"
+  "version" "1.0.6"
+
 "@tanstack/query-core@4.29.5":
   "integrity" "sha512-xXIiyQ/4r9KfaJ3k6kejqcaqFXXBTzN2aOJ5H1J6aTJE9hl/nbgAdfF6oiIu0CD5xowejJEJ6bBg8TO7BN4NuQ=="
   "resolved" "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.29.5.tgz"
