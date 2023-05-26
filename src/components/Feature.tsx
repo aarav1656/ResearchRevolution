@@ -16,7 +16,7 @@ import {
     FcDonate,
     FcManager,
   } from 'react-icons/fc';
-  import { GrPersonalComputer } from 'react-icons/gr';
+  import { GrPersonalComputer, GrStorage } from 'react-icons/gr';
   import { SiLighthouse , SiProbot} from 'react-icons/si';
   interface CardProps {
     heading: string;
@@ -74,30 +74,30 @@ import {
             Research Revolution is powered by the best features to provide a decentralised platform for researchers to publish their research papers and get paid for it.
           </Text>
         </Stack>
-  
+
         <Container maxW={'5xl'} mt={12}>
           <Flex flexWrap="wrap" gridGap={6} justify="center">
             <Card
-                heading={'NFT Chat Powered'}
-                icon={<Icon as={FcManager} w={10} h={10} />}
-                description={
-                  'Chat with your community members and get access to exclusive content and groups.'
-                }
-                href={'#'}
-              />
-            <Card
-              heading={'DATADAO'}
-              icon={<Icon as={FcDonate} w={10} h={10} />}
+              heading={'NFT Chat Powered'}
+              icon={<Icon as={FcManager} w={10} h={10} />}
               description={
-                'A new Programmable Market to sell your Research Papers'
+                'Chat with your community members and get access to exclusive content and groups powered by Polybase.'
               }
               href={'#'}
             />
             <Card
-              heading={'Global Collaberation for your Research Paper'}
+              heading={'DataDAO Market'}
+              icon={<Icon as={GrStorage} w={10} h={10} />}
+              description={
+                'A new programmable market build using FVM to sell your research papers and receive cross-chain funding.'
+              }
+              href={'#'}
+            />
+            <Card
+              heading={'Global Collaboration'}
               icon={<Icon as={FcCollaboration} w={10} h={10} />}
               description={
-                'Collaborate with peers from all over the globe in dynamic teams.'
+                'Collaborate with peers from all over the globe using Polybase and enhance your research projects.'
               }
               href={'#'}
             />
@@ -105,7 +105,7 @@ import {
               heading={'Lighthouse Powered Access Control'}
               icon={<Icon as={SiLighthouse} w={10} h={10} />}
               description={
-                'Apply access control to your Files uploaded to FVM'
+                'Apply access control to your files uploaded to FVM, ensuring privacy and data protection.'
               }
               href={'#'}
             />
@@ -113,15 +113,15 @@ import {
               heading={'Peer Review System'}
               icon={<Icon as={SiProbot} w={10} h={10} />}
               description={
-                'You can earn tokens and reputation for peer-reviewing work.'
+                'Contribute to the research community and earn tokens and reputation by peer-reviewing work using the Polybase platform.'
               }
               href={'#'}
             />
             <Card
-              heading={'Decentralised Storage'}
+              heading={'Decentralized Storage'}
               icon={<Icon as={GrPersonalComputer} w={10} h={10} />}
               description={
-                'Storing content on Filecoin ensures durability, security, and resilience.'
+                'Store your research papers on the Filecoin Virtual Machine (FVM) for durable, secure, and resilient storage.'
               }
               href={'#'}
             />
