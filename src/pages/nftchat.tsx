@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { useAuth } from '@polybase/react';
 import { Polybase } from '@polybase/client';
@@ -13,7 +14,7 @@ const db = new Polybase({
 const date = new Date();
 const userRef = db.collection('User');
 const chatRef = db.collection('Message');
-let newd;
+let newd : any;
 // const auth = new Auth();
 
 function Chat() {

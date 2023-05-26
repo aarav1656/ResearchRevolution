@@ -8,7 +8,7 @@ const ResearcherForm = () => {
   const { addResearcher } = useContext(ResearcherContext);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data : any) => {
     setIsSubmitting(true);
 
     // Perform any API calls or data processing here

@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // polybase
   const polybase = new Polybase();
-  const auth = typeof window !== "undefined" ? new Auth() : null;
+  const auth: Auth | null = typeof window !== "undefined" ? new Auth() : null;
 
   return (
     <ChakraProvider>
@@ -48,6 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <RainbowKitProvider chains={chains}>
         <PolybaseProvider polybase={polybase}>
         <AuthProvider
+          // @ts-ignore
           auth={auth}
           polybase={polybase}>
             <Flex flexDirection="column" minHeight="100vh">

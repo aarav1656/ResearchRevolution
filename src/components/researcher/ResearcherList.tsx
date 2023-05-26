@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useContext } from 'react';
 import { ResearcherContext } from '../../../context/ResearcherContext';
 import { Box, Text, Divider, Flex } from '@chakra-ui/react';

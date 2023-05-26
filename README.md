@@ -1,6 +1,7 @@
 # ResearchRevolution
 
-### Contract code for the Repo can be found at - https://github.com/legendarykamal/RR-Contract
+### Contract code for the Repo can be found at ->
+https://github.com/legendarykamal/RR-Contract
 
 Unleashing the Future of Science: ResearchRevolution - Where Cross-Chain FVM Fuels DeSci
 

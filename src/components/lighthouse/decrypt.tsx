@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import { Button, Link } from '@chakra-ui/react';
 import lighthouse from '@lighthouse-web3/sdk';
@@ -8,9 +8,10 @@ type DecryptProps = {
     cid: string;
 };
 function Decrypt({ cid  } : DecryptProps) {
-  const [fileURL, setFileURL] = React.useState(null);
+  const [fileURL, setFileURL] = useState('');
 
   const encryptionSignature = async () => {
+    // @ts-ignore
     const provider = new ethers.providers.Web3Provider(window?.ethereum);
     const signer = provider.getSigner();
     const address = await signer.getAddress();
@@ -27,6 +28,7 @@ function Decrypt({ cid  } : DecryptProps) {
       const { publicKey, signedMessage } = await encryptionSignature();
       const keyObject = await lighthouse.fetchEncryptionKey(cid, publicKey, signedMessage);
       const fileType = 'image/jpeg';
+      // @ts-ignore
       const decrypted = await lighthouse.decryptFile(cid, keyObject.data.key, fileType);
       const url = URL.createObjectURL(decrypted);
       setFileURL(url);

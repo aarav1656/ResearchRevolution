@@ -6,7 +6,7 @@ import lighthouse from "@lighthouse-web3/sdk";
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
 
-const ResearchPaperBox = ({ fileName, publicKey, cid }) => (
+const ResearchPaperBox = ({ fileName , publicKey , cid } : { fileName: string; publicKey: string; cid: string }) => (
   <Box
     borderWidth={1}
     borderRadius="md"
