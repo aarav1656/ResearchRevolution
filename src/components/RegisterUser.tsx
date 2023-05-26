@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Polybase } from '@polybase/client';
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from '@chakra-ui/react';
 import { useAuth } from '@polybase/react';
-import { ethPersonalSign } from '@polybase/eth';
-
 
 function RegisterUser() {
   const { auth , state , loading }  = useAuth();
