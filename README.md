@@ -7,7 +7,7 @@ Unleashing the Future of Science: ResearchRevolution - Where FVM with Axellar Fu
 
 RRDao ( DataDao) Created on the FVM Network -> https://hyperspace.filfox.info/en/tx/0x56fca0023a5532b01556a5f82f496256346266698618b0fdd74dbf0d2eae860e
 
-RR Dao Address- 0x8d72887163f8bD8A65649Ef4af37dcc21500e5A1
+RR Dao Address- 0x3BFa81d2f797677Ea2f115697c2611A786C2cbCD
 
 Researcher NFT Deployed on FVM Hyperspace Network - 0xC10261e1980D0a45b14B24CD8e1c79646dbD9CaD which will be used by the different researchers to token-gate their Papers.
 

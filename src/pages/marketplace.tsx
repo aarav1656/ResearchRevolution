@@ -53,9 +53,6 @@ const ResearchersPage = () => {
   return (
     <div>
       <h1 className='text-center text-indigo-400 font-semibold text-2xl'>RR DataDao Marketplace</h1>
-      <Button onClick={openModal}>Add Researcher</Button>
-      <ResearchersModal isOpen={isModalOpen} onClose={closeModal} />
-      <ResearchersList />
       <h1>ResearchPapers</h1>
         {papers.map((paper) => (
           <Box
@@ -92,7 +89,10 @@ const ResearchersPage = () => {
             </div>
           </Box>
       ))}
-      
+      <br />
+      <ResearchersList />
+      <ResearchersModal isOpen={isModalOpen} onClose={closeModal} />
+      <Button onClick={openModal}>Add Researcher</Button>
     </div>
   );
 };

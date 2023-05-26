@@ -208,6 +208,11 @@
 				"internalType": "enum RRDao.PaperStage",
 				"name": "stage",
 				"type": "uint8"
+			},
+			{
+				"internalType": "address",
+				"name": "walletAddress",
+				"type": "address"
 			}
 		],
 		"name": "uploadPaper",
@@ -291,6 +296,11 @@
 				"internalType": "enum RRDao.PaperStage",
 				"name": "stage",
 				"type": "uint8"
+			},
+			{
+				"internalType": "address",
+				"name": "walletAddress",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
