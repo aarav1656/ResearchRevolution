@@ -28,17 +28,19 @@ https://hyperspace.filfox.info/en/tx/0x83cdd9971ff3c2c83e0c6ec48740ed6d2ac1f2c3e
 
 The Research Revolution platform was built using a combination of various technologies and frameworks. The key technologies used include:
 
-Axellar: Axellar was utilized for cross-chain funding of research projects, enabling seamless financial transactions across different blockchain networks.
+- Axellar: Axellar was utilized for cross-chain funding of research projects, enabling seamless financial transactions across different blockchain networks.
 
-Polybase: Polybase was integrated into the platform to provide NFT-based chat functionality and peer-to-peer review capabilities, fostering collaboration and feedback among researchers.
+This proves to be a vital feature that allows researchers to receive funding in various cryptocurrencies and manage their funding wallets directly from the platform.
 
-FVM: Research papers are stored on the Filecoin Virtual Machine (FVM), ensuring decentralized and secure storage of scientific data. A DataDAO Market is created to facilitate open sharing of research papers.
+- Polybase: Polybase was integrated into the platform to provide NFT-based chat functionality and peer-to-peer review capabilities, fostering collaboration and feedback among researchers.
 
-Lit Protocol: P2P keys provided by the Lit Protocol were employed for encrypting documents, ensuring privacy and data protection for researchers.
+- FVM: Research papers are stored on the Filecoin Virtual Machine (FVM), ensuring decentralized and secure storage of scientific data. A DataDAO Market is created to facilitate open sharing of research papers.
 
-Tellor Oracle: The Tellor Oracle was utilized to fetch and provide on-chain data for research purposes, enabling access to reliable and trustworthy data sources.
+- Lit Protocol: P2P keys provided by the Lit Protocol were employed for encrypting documents, ensuring privacy and data protection for researchers.
 
-Spheron: Spheron, a decentralized deployment framework, was used to ensure the secure and decentralized deployment of the Research Revolution platform.
+- Tellor Oracle: The Tellor Oracle was utilized to fetch and provide on-chain data for research purposes, enabling access to reliable and trustworthy data sources.
+
+- Spheron: Spheron, a decentralized deployment framework, was used to ensure the secure and decentralized deployment of the Research Revolution platform.
 
 ## Problems Addressed by ResearchRevolution
 
