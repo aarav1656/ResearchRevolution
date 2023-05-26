@@ -5,7 +5,9 @@ https://github.com/legendarykamal/RR-Contract
 
 Unleashing the Future of Science: ResearchRevolution - Where FVM with Axellar Fuels the Cross-Chain DeSci
 
-Polybase Schema for users - [https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/](https://explorer.testnet.polybase.xyz/studio/pk%2F0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503%2FResearchRev/)
+RRDao ( DataDao) Created on the FVM Network -> https://hyperspace.filfox.info/en/tx/0x56fca0023a5532b01556a5f82f496256346266698618b0fdd74dbf0d2eae860e
+
+RR Dao Address- 0x8d72887163f8bD8A65649Ef4af37dcc21500e5A1
 
 Researcher NFT Deployed on FVM Hyperspace Network - 0xC10261e1980D0a45b14B24CD8e1c79646dbD9CaD which will be used by the different researchers to token-gate their Papers.
 

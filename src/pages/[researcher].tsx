@@ -4,16 +4,18 @@ import ResearcherPapers from '../components/ResearcherPapers';
 import Uploadtab from '../components/Uploadtab';
 import Allpaper from '../components/papers/allpapers';
 import Funding from '../components/funding';
+import { useAccount } from 'wagmi';
 
 type ResearcherPageProps = {
   address: string;
 };
 
-const ResearcherPage: React.FC<ResearcherPageProps> = ({ address }) => {
+const ResearcherPage: React.FC<ResearcherPageProps> = () => {
+  const { address } = useAccount();
   return (
     <Box p={8}>
       <Heading as="h1" mb={4}>
-        Researcher Page
+        Researcher Page { address}
       </Heading>
       <Tabs variant="soft-rounded" colorScheme="teal">
         <TabList>
