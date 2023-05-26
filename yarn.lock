@@ -1871,10 +1871,10 @@
   "resolved" "https://registry.npmjs.org/@pedrouid/environment/-/environment-1.0.1.tgz"
   "version" "1.0.1"
 
-"@polybase/auth@*":
-  "integrity" "sha512-ri3v4SKMns/cM15RjCJcCtnBoYJRXjQ5r8J+PIxLJ3uKPcLswc/PaiGJTq06iDKENX0u5wcOImlqfDYMJRzU+A=="
-  "resolved" "https://registry.npmjs.org/@polybase/auth/-/auth-0.5.0.tgz"
-  "version" "0.5.0"
+"@polybase/auth@*", "@polybase/auth@^0.6.0":
+  "integrity" "sha512-95VtYmyWX/7H1aobzHcJ+VKn39sTlq6StvagCxBD/6yYn7ArpgMmKuSActsZsgF2cNkPPME7qwPd4ZhM0QLLtg=="
+  "resolved" "https://registry.npmjs.org/@polybase/auth/-/auth-0.6.0.tgz"
+  "version" "0.6.0"
   dependencies:
     "penpal" "^6.2.2"
 
