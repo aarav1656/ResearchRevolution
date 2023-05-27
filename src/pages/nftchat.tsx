@@ -7,6 +7,12 @@ import { useState } from 'react';
 import { useCollection } from '@polybase/react';
 import { useRouter } from 'next/router';
 import { Button } from '@chakra-ui/react';
+import { useAccount , useEnsName , useEnsAvatar } from 'wagmi';
+import eth from '../../public/assets/ethereum.gif';
+import Image from 'next/image';
+import moonbeam from '../../public/assets/moonbeam.gif';
+import avalanche from '../../public/assets/avalanche.gif';
+
 const db = new Polybase({
     defaultNamespace: 'pk/0x4d0a42d54b52f8ca13ebb7bc080afeda61c9790d1dab9fd5523046e4703dc5553ef262f50216f0ae3ddd80960e4dda9de7eac78e27653af50ca533063db4f503/ResearchRev',
 });
@@ -18,6 +24,20 @@ let newd : any;
 // const auth = new Auth();
 
 function Chat() {
+
+  // get the Ens name of the user
+  const { address} = useAccount();
+  const {data : ensdata , isError , isLoading} = useEnsName({
+    address: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+    chainId: 1,
+  });
+
+  // and then get the Ens Avatar of the user
+  const { data : ensavt , isError: err , isLoading: loaded } = useEnsAvatar({
+    name: address,
+    chainId: 1,
+  })
+ 
   const [result, setResult] = useState(null);
   const [stateuserId, setStateuserId] = useState('');
   const [selectedName, setSelectedName] = useState('');
@@ -100,10 +120,11 @@ function Chat() {
             className="flex border rounded shadow-lg h-full">
             <div className="w-1/3 border flex flex-col">
               <div className="py-2 px-3 bg-grey-lighter flex flex-row justify-between items-center">
-                <div>
-                  <h1>team img</h1>
-                </div>
-
+              <div className='flex gap-5'>
+                <Image src={eth} alt="Ethereum" width={100} height={200} />
+                <Image src={moonbeam} alt="Moonbeam" width={100} height={200} />
+                <Image src={avalanche} alt="Avalanche" width={100} height={200} />
+              </div>
                 <div className="flex">
                   <div></div>
                   <div className="ml-4">
@@ -166,7 +187,17 @@ function Chat() {
                 <h2 className='text-xl text-blue-500'>Get Peer Review</h2>
 
                 <div className="flex">
-                  <h1>vc img</h1>
+                  {ensavt && (
+                    <div className="ml-4">
+                      <img
+                        src={ensavt}
+                        alt="avatar"
+                        width={80}
+                        className="rounded-full"
+                      />
+                    </div>
+                  )}
+                  {!ensavt &&  <img src="https://cdnb.artstation.com/p/assets/images/images/047/600/399/large/surya-nair-mx-scientist-1.jpg?1647977730" alt="researcher" width={80} /> }
                 </div>
               </div>
 
