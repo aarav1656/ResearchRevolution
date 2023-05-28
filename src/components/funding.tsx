@@ -7,6 +7,7 @@ import {
   Button,
   Select,
 } from '@chakra-ui/react';
+import useAxellar from '../components/axellar/useAxellar';
 
 const DistributionForm = () => {
   const [destinationAddresses, setDestinationAddresses] = useState('');
@@ -14,8 +15,8 @@ const DistributionForm = () => {
   const [selectedAsset, setSelectedAsset] = useState('');
   const [selectedSourceChain, setSelectedSourceChain] = useState('');
   const [selectedDestinationChain, setSelectedDestinationChain] = useState('');
-
-  const handleSubmit = (event : any) => {
+  const {execute} = useAxellar();
+  const handleSubmit = async(event : any) => {
     event.preventDefault();
 
     // Perform any actions with the form data
@@ -26,6 +27,19 @@ const DistributionForm = () => {
       selectedSourceChain,
       selectedDestinationChain,
     });
+
+    try {
+      await execute({
+        amount,
+        receiver: destinationAddresses,
+        symbol: selectedAsset,
+      });
+      // Success message or any additional logic
+      console.log('Execution successful');
+    } catch (error) {
+      // Handle error
+      console.error('Execution error:', error);
+    }  
 
     // Reset form fields
     setDestinationAddresses('');
@@ -53,7 +67,7 @@ const DistributionForm = () => {
           <FormLabel>Amount</FormLabel>
           <Input
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => setAmount((parseInt(e.target.value) * 10 ** 6).toString())}
             type="text"
             required
           />

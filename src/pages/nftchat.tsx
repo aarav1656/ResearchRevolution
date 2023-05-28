@@ -44,7 +44,6 @@ function Chat() {
   const { data, error, loading } = useCollection(userRef);
 
   const { auth, state } = useAuth();
-//   console.log(state.userId, 'state.userId');
   const [formInput, setFormInput] = useState({
     name: '',
     toAddress: '',
@@ -54,7 +53,7 @@ function Chat() {
 
   useEffect(() => {
     const fetchResult = async () => {
-      await setStateuserId(state.userId + '');
+      await setStateuserId(address + '');
       const fkhsd = await chatRef.get();
       newd = fkhsd.data;
       console.log(newd ,"newd");
@@ -155,14 +154,15 @@ function Chat() {
                   return (
                     <div className="px-3 flex items-center bg-grey-light cursor-pointer">
                       <div className="ml-4 flex-1 border-b border-grey-lighter py-4">
-                        <div className="flex items-bottom justify-between">
+                        <div className="flex items-bottom justify-between"> 
                           <Button
                             key={data.data.id}
                             onClick={() => handleClick(data.data.id)}
                             className="text-grey-darkest">
+                              Chat with {" "}
                             {data.data.id}
                           </Button>
-                          <p className="text-xs text-grey-darkest">
+                          <p className="text-xs">
                             {date.getHours()} : {date.getMinutes()}
                           </p>
                         </div>
@@ -209,7 +209,7 @@ function Chat() {
                     <div
                       className="rounded py-2 px-4"
                       style={{ backgroundColor: '#DDECF2' }}>
-                      <p className="text-sm uppercase">{formattedDate}</p>
+                      <p className="text-sm uppercase">TUE, MAY 23 2023</p>
                     </div>
                   </div>
 
@@ -218,7 +218,7 @@ function Chat() {
                       className="rounded py-2 px-4"
                       style={{ backgroundColor: '#FCF4CB' }}>
                       <p className="text-xs">
-                        Wallet to Wallet Secure NFT Interactions.
+                        Wallet to Wallet Encrypted NFT Interactions.
                       </p>
                     </div>
                   </div>

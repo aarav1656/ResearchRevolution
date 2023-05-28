@@ -27,7 +27,7 @@ const ResearchersList = () => {
             <Text fontSize="lg" fontWeight="semibold">
               Name: {researcher.name}
             </Text>
-            <Text>Email: {researcher.email}</Text>
+            <Text>Wallet Address - {researcher.walletAddress}</Text>
             <Text>Institution: {researcher.institution}</Text>
             <Divider my={2} />
           </Box>
