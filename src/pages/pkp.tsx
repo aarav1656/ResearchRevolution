@@ -19,8 +19,7 @@ declare global {
 	}
 }
 
-const RELAY_API_URL =
-	process.env.REACT_APP_RELAY_API_URL || "http://localhost:3001";
+const RELAY_API_URL = process.env.NEXT_PUBLIC_RELAY_API_URL || "http://localhost:3001";
 
 function Oauthgoogle() {
 	const [registeredPkpEthAddress, setRegisteredPkpEthAddress] = useState<
@@ -706,7 +705,7 @@ async function hashBytes({ bytes }: { bytes: Uint8Array }): Promise<string> {
 // 	setStatusFn("Success!");
 // }
 
-const rpcUrl = process.env.REACT_APP_RPC_URL || "http://localhost:8545";
+const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL || "http://localhost:8545";
 
 
 function getUnifiedAccessControlConditions(
