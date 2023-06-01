@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <Navbar />
               <Box flex="1">
                 <ResearcherProvider>
-                  <GoogleOAuthProvider clientId='1071348522014-3qq1ln33ful535dnd8r4f6f9vtjrv2nu.apps.googleusercontent.com'>
+                  <GoogleOAuthProvider clientId='537284182602-ul9nmso8sk507s10a3kp3jv5hgtvl65v.apps.googleusercontent.com'>
                     <Component {...pageProps} />
                   </GoogleOAuthProvider>
                 </ResearcherProvider>
