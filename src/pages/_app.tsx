@@ -17,6 +17,7 @@ import type { AppProps } from 'next/app';
 import { PolybaseProvider , AuthProvider} from "@polybase/react";
 import { Polybase } from "@polybase/client";
 import { Auth } from "@polybase/auth";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { chains, provider } = configureChains(
@@ -55,7 +56,9 @@ function MyApp({ Component, pageProps }: AppProps) {
               <Navbar />
               <Box flex="1">
                 <ResearcherProvider>
-                  <Component {...pageProps} />
+                  <GoogleOAuthProvider clientId='1071348522014-3qq1ln33ful535dnd8r4f6f9vtjrv2nu.apps.googleusercontent.com'>
+                    <Component {...pageProps} />
+                  </GoogleOAuthProvider>
                 </ResearcherProvider>
               </Box>
               <Footer />

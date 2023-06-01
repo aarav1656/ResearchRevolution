@@ -40,9 +40,7 @@
 		"@lit-protocol/lit-node-client": "^2.2.0",
 		"@lit-protocol/lit-node-client-nodejs": "^2.2.0",
 		"@lit-protocol/types": "^2.2.0",
-		"@mui/material": "^5.10.16",
-		"@react-oauth/google": "^0.4.0",
-    "base64url": "^3.0.1"
+		"@react-oauth/google": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",

@@ -1,21 +1,15 @@
+// @ts-nocheck
 import * as LitJsSdk_accessControlConditions from "@lit-protocol/access-control-conditions";
 import * as LitJsSdk_blsSdk from "@lit-protocol/bls-sdk";
 import * as LitJsSdk_authHelpers from "@lit-protocol/auth-helpers";
 import * as LitJsSdk_types from "@lit-protocol/types";
 import * as LitJsSdk from "@lit-protocol/lit-node-client";
 import { AccsDefaultParams, AuthSig, AuthCallback } from "@lit-protocol/types";
-import { Button, ButtonGroup, TextField } from "@mui/material";
+import { Button , ButtonGroup } from "@chakra-ui/react";
 import { GoogleLogin } from "@react-oauth/google";
-import {
-	startAuthentication,
-	startRegistration,
-} from "@simplewebauthn/browser";
-import base64url from "base64url";
 import { ethers, utils } from "ethers";
 import { computeAddress } from "ethers/lib/utils";
 import { useState } from "react";
-import "./App.css";
-import { getDomainFromOrigin } from "./utils/string";
 
 type CredentialResponse = any;
 
@@ -48,11 +42,6 @@ function Oauthgoogle() {
 	>("");
 	const [status, setStatus] = useState("");
 	const [selectedAuthMethod, setSelectedAuthMethod] = useState(6);
-	const [webAuthnUsername, setWebAuthnUsername] = useState<string>("");
-	const [authSig, setAuthSig] = useState<AuthSig | null>(null);
-	const [executeJsSignature, setExecuteJsSignature] = useState<string | null>(
-		null
-	);
 	const [encryptedSymmetricKey, setEncryptedSymmetricKey] = useState<
 		Uint8Array
 	>(new Uint8Array());
@@ -117,7 +106,7 @@ function Oauthgoogle() {
 						</div>
 					)}
 					<h3>Step 2: Use Google Credential to Mint PKP.</h3>
-					<button
+					<Button
 						onClick={() =>
 							handleMintPkpUsingGoogleAuth(
 								googleCredentialResponse,
@@ -130,7 +119,7 @@ function Oauthgoogle() {
 						}
 					>
 						Mint PKP
-					</button>
+					</Button>
 					{registeredPkpEthAddress && (
 						<div>
 							Registered PKP Eth Address:{" "}
@@ -188,95 +177,6 @@ function Oauthgoogle() {
 					>
 						Decrypt
 					</Button>
-				</>
-			)}
-			{selectedAuthMethod === 3 && (
-				<>
-					<h3>Step 1: Register to mint PKP. (optional username)</h3>
-					<TextField
-						label="Username"
-						variant="outlined"
-						onChange={e => setWebAuthnUsername(e.target.value)}
-					/>
-					<Button
-						variant="contained"
-						onClick={async () => {
-							await handleWebAuthnRegister(
-								webAuthnUsername,
-								setStatus,
-								({ pkpEthAddress, pkpPublicKey }) => {
-									setRegisteredPkpEthAddress(pkpEthAddress);
-									setRegisteredPkpPublicKey(pkpPublicKey);
-								}
-							);
-						}}
-					>
-						Register
-					</Button>
-					{registeredPkpEthAddress && (
-						<div>
-							<b>Registered PKP Eth Address: </b>
-							{registeredPkpEthAddress}
-						</div>
-					)}
-					<h3>
-						Step 2: Authenticate against Lit Nodes to generate auth
-						sigs.
-					</h3>
-					<Button
-						variant="contained"
-						onClick={async () => {
-							const {
-								authSig,
-								pkpPublicKey,
-							} = await handleWebAuthnAuthenticate(setStatus);
-							setAuthSig(authSig);
-
-							// After authenticating, we can store the pkpPublicKey for executing a
-							// Lit Action later.
-							setAuthenticatedPkpPublicKey(pkpPublicKey);
-							setAuthenticatedPkpEthAddress(
-								computeAddress(`0x${pkpPublicKey}`)
-							);
-						}}
-					>
-						Authenticate
-					</Button>
-					{authenticatedPkpPublicKey && authSig && (
-						<>
-							<div>
-								<b>Authenticated PKP Public Key: </b>
-								{authenticatedPkpPublicKey}
-							</div>
-							<div>
-								<b>Auth Sig: </b>
-								{JSON.stringify(authSig)}
-							</div>
-						</>
-					)}
-					<h3>
-						Step 3: Generate session signatures and use them to
-						execute a Lit Action.
-					</h3>
-					<Button
-						variant="contained"
-						onClick={async () => {
-							const signature = await handleExecuteJs(
-								setStatus,
-								authSig!,
-								authenticatedPkpPublicKey
-							);
-							setExecuteJsSignature(signature);
-						}}
-					>
-						Execute Lit Action
-					</Button>
-					{executeJsSignature && (
-						<div>
-							<b>Executed Lit Action Signature: </b>
-							{executeJsSignature}
-						</div>
-					)}
 				</>
 			)}
 		</div>
@@ -702,7 +602,7 @@ async function handleRetrieveSymmetricKeyNodes(
 }
 
 function publicKeyToAddress(publicKey: string) {
-	return utils.computeAddress(`0x${publicKey}`);
+	return computeAddress(`0x${publicKey}`);
 }
 
 async function hashBytes({ bytes }: { bytes: Uint8Array }): Promise<string> {
@@ -806,149 +706,8 @@ async function hashBytes({ bytes }: { bytes: Uint8Array }): Promise<string> {
 // 	setStatusFn("Success!");
 // }
 
-async function handleWebAuthnRegister(
-	username: string,
-	setStatusFn: (status: string) => void,
-	onSuccess: ({
-		pkpEthAddress,
-		pkpPublicKey,
-	}: {
-		pkpEthAddress: string;
-		pkpPublicKey: string;
-	}) => void
-) {
-	let url = `${RELAY_API_URL}/auth/webauthn/generate-registration-options`;
-
-	// Handle optional username
-	if (username !== "") {
-		url += `?username=${encodeURIComponent(username)}`;
-	}
-
-	const resp = await fetch(url, { headers: { "api-key": "1234567890" } });
-
-	let attResp;
-	try {
-		const opts = await resp.json();
-
-		// Require a resident key for this demo
-		opts.authenticatorSelection.residentKey = "required";
-		opts.authenticatorSelection.requireResidentKey = true;
-		opts.extensions = {
-			credProps: true,
-		};
-
-		attResp = await startRegistration(opts);
-	} catch (error) {
-		// TODO: Handle error
-		throw error;
-	}
-
-	console.log("attResp", { attResp });
-
-	// Verify and mint PKP.
-	setStatusFn("Verifying WebAuthn registration...");
-	const verificationAndMintResp = await fetch(
-		`${RELAY_API_URL}/auth/webauthn/verify-registration`,
-		{
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				"api-key": "1234567890",
-			},
-			body: JSON.stringify({ credential: attResp }),
-		}
-	);
-
-	if (
-		verificationAndMintResp.status < 200 ||
-		verificationAndMintResp.status >= 400
-	) {
-		console.warn(
-			"Something went wrong with the API call",
-			await verificationAndMintResp.json()
-		);
-		setStatusFn("Uh oh, something's not quite right.");
-		return null;
-	}
-
-	const resBody = await verificationAndMintResp.json();
-	console.log("Response OK", { body: resBody });
-	setStatusFn(
-		"Successfully registered using WebAuthn! PKP minting initiated..."
-	);
-
-	// Poll until success
-	const mintRequestId = resBody.requestId;
-	await pollRequestUntilTerminalState(mintRequestId, setStatusFn, onSuccess);
-}
-
 const rpcUrl = process.env.REACT_APP_RPC_URL || "http://localhost:8545";
 
-async function handleWebAuthnAuthenticate(
-	setStatusFn: (status: string) => void
-): Promise<{
-	authSig: AuthSig;
-	pkpPublicKey: string;
-}> {
-	// Fetch latest blockHash
-	setStatusFn("Fetching latest block hash...");
-	const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-
-	const block = await provider.getBlock("latest");
-	const blockHash = block.hash;
-
-	// Turn into byte array.
-	const blockHashBytes = ethers.utils.arrayify(blockHash);
-	console.log(
-		"blockHash",
-		blockHash,
-		blockHashBytes,
-		base64url(Buffer.from(blockHashBytes))
-	);
-
-	// Construct authentication options.
-	const rpId = getDomainFromOrigin(window.location.origin);
-	console.log("Using rpId: ", { rpId });
-	const authenticationOptions = {
-		challenge: base64url(Buffer.from(blockHashBytes)),
-		timeout: 60000,
-		userVerification: "required",
-		rpId,
-	};
-
-	// Authenticate with WebAuthn.
-	setStatusFn("Authenticating with WebAuthn...");
-	const authenticationResponse = await startAuthentication(
-		authenticationOptions
-	);
-
-	// BUG: We need to make sure userHandle is base64url encoded.
-	// Deep copy the authentication response.
-	const actualAuthenticationResponse = JSON.parse(
-		JSON.stringify(authenticationResponse)
-	);
-	actualAuthenticationResponse.response.userHandle = base64url.encode(
-		authenticationResponse.response.userHandle
-	);
-
-	// Call all nodes POST /web/auth/webauthn to generate authSig.
-	setStatusFn("Verifying WebAuthn authentication against Lit Network...");
-	const litNodeClient = await getLitNodeClient();
-
-	// Generate authMethod.
-	const authMethod = litNodeClient.generateAuthMethodForWebAuthn(
-		actualAuthenticationResponse
-	);
-
-	// Get authSig.
-	const { authSig, pkpPublicKey } = await litNodeClient.signSessionKey({
-		authMethods: [authMethod],
-		expiration: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
-		resources: [],
-	});
-
-	return { authSig, pkpPublicKey };
-}
 
 function getUnifiedAccessControlConditions(
 	pkpEthAddress?: string
