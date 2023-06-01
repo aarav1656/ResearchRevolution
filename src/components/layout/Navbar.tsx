@@ -89,7 +89,9 @@ export default function Navbar() {
                   <p className='text-center'>Hi</p>
                   <br />
                   <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
+                  <Link href='/pkp'>
+                    <MenuItem>PKP through Google</MenuItem>
+                  </Link>
                   <MenuItem>Account Settings</MenuItem>
                   <MenuItem>Logout</MenuItem>
                 </MenuList>
